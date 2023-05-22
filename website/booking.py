@@ -1,6 +1,6 @@
 from flask import Blueprint,render_template, request, flash
 
-booking = Blueprint('auth', __name__)
+booking = Blueprint('booking', __name__)
 
 @booking.route('/login', methods=['GET', 'POST'])
 def login():
