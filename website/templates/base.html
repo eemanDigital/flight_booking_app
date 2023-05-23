@@ -63,9 +63,110 @@
     </div>
   </nav>
       
-      <div>
-        {% block content %}{% endblock %}
+      <!--Body section-->
+    <div class="app-body">    
+        <div class="trip-category">
+                <input type="radio" id="trip-type" name="language" value="trip-type">
+                <label for="trip-type">One-way</label>
+                <input type="radio" id="trip-type" name="language" value="trip-type">
+                <label for="trip-type">Roundtrip</label>
+            </div>
+    <!--Booking flights-->
+  <title>Flight Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    h2 {
+      text-align: center;
+    }
+    
+    form {
+      margin-top: 20px;
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .form-group select {
+      height: 36px;
+    }
+    
+    .form-group input[type="submit"] {
+      background-color: #1900ff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .form-group input[type="submit"]:hover {
+      background-color: #000dff;
+    }
+  </style>
+</head>
+
+  <div class="container">
+    <h2>Bookings</h2>
+    <form>
+      <div class="form-group">
+        <label for="origin">From</label>
+        <input type="text" id="origin" name="origin" placeholder="Enter origin">
       </div>
+      
+      <div class="form-group">
+        <label for="destination">To</label>
+        <input type="text" id="destination" name="destination" placeholder="Enter destination">
+      </div>
+      
+      <div class="form-group">
+        <label for="departure-date">Departure</label>
+        <input type="date" id="departure-date" name="departure-date">
+      </div>
+      
+      <div class="form-group">
+        <label for="passengers">Travellers</label>
+        <select id="passengers" name="passengers">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <!-- Add more options if needed -->
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <input type="submit" value="Search Flights">
+      </div>
+    </form>
+  </div>
       
       <!-- <div class="form-outline">
         <input type="search" id="form1" class="form-control" />
