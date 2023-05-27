@@ -1,13 +1,45 @@
-{% extends 'base.html' %} {% block title %}Hotels{% endblock %}
+{% extends 'base.html' %} {% block title %}Home{% endblock %}
 {% block content %}
 
 <div class="container mt-4" >
-    <div class="jumbotron bg-primary text-white">
+    <!-- <div class="banner">
+       
       <h1 class="display-4">Welcome to Flight Booking App!</h1>
       <p class="lead">Book your flights with ease.</p>
+    </div> -->
+    <!-- <div class="jumbotron jumbotron-fluid text-white banner">
+        <div class="container">
+            <div class="overlay"></div>
+          <h1 class="display-4 text">Welcome to the Flight App!</h1>
+          <p class="lead text">Book your flights with ease.</p>
+        </div>
+      </div> -->
+      
+      <!-- Jumbotron -->
+<div
+class="bg-image p-5 text-center banner shadow-1-strong rounded mb-5 text-white "
+style="background-image: url('https://images.unsplash.com/photo-1583202075376-837d5ff1bf0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+<h1 class="display-4 text font-weight-bold">Welcome to Flyit!</h1>
+<p class="lead text font-weight-bold">Book your flights with ease with Flyit.</p>
+</div>
+<!-- Jumbotron -->
+  <!-- Trip Selection Section -->
+  <div class="container mt-4">
+    <h2>Select Trip</h2>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="trip" id="singleTrip" value="single" checked>
+      <label class="form-check-label" for="singleTrip">
+        Single Trip
+      </label>
     </div>
-
-    <div class="row mt-4 jumbotron">
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="trip" id="roundTrip" value="round">
+      <label class="form-check-label" for="roundTrip">
+        Round Trip
+      </label>
+    </div>
+  </div>
+    <div class="row mt-4 jumbotron jb">
       <div class="col-md-6">
         <h3>Search Flights</h3>
         <!-- Flight search form -->
@@ -68,4 +100,29 @@
       </div>
     </div>
   </div>
+
+   <!-- Services Section -->
+   <div class="container mt-4">
+    <h2>Services</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis interdum consectetur. Quisque sit amet nisi eget sem iaculis dapibus. In ut efficitur velit. Nulla lacinia feugiat scelerisque. Mauris consectetur aliquet lectus, auctor dignissim nulla accumsan sed. Fusce consectetur lacus turpis, in aliquet nisl tristique sed. Nam nec interdum sem. Ut venenatis rutrum fringilla.</p>
+    <p>Phasellus lacinia nisl non ligula tristique, vel consectetur leo ultricies. Sed aliquet, neque in rutrum efficitur, libero est laoreet nisi, non semper quam lorem id diam. Nullam elementum elit elit, et efficitur est cursus nec. Suspendisse tincidunt leo dui, sed blandit enim pharetra eu. Nullam pellentesque semper dolor, non pellentesque elit consectetur sit amet. Nam porttitor massa ut vestibulum mollis. Proin pulvinar sollicitudin nisi, in pharetra dui fringilla eget. Donec id orci efficitur, semper risus at, sagittis diam. Fusce ultricies ipsum vel consectetur facilisis.</p>
+    <!-- Add more services information as needed -->
+  </div>
+
+  <style>
+
+    .banner{
+        
+     background-repeat: no-repeat; 
+     background-position: center;   
+     width: 100%;  
+     position: relative;
+    display: inline-block;
+    }
+
+    .jb{
+        background-color: rgb(255, 190, 10);
+    }
+      
+  </style>
   {% endblock %}

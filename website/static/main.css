@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: Arial, sans-serif;
 }
 
@@ -54,3 +54,7 @@ form {
 .form-group input[type="submit"]:hover {
   background-color: #000dff;
 }
+
+/* .banner{
+  background-image: url('../images/banner.jpg');
+} */

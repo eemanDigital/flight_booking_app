@@ -18,10 +18,11 @@
    crossorigin="anonymous">
 
    <!--Vanila CSS (styling link)-->
-   <link rel="stylesheet" href="../style/main.css">
+   <!-- <link rel="stylesheet" href="../style/main.css"> -->
+   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='') }}">
 </head>
-<body style="background-color: rgba(255, 0, 72, 0.53);">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<body>
+  <nav class="navbar navbar-expand-lg txt bg-danger">
     <div class="container">
       <a class="navbar-brand" href="/">Flyit</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -69,7 +70,18 @@
 
 </body>
 <!-- footer -->
-<footer class="bg-light text-center mt-4 py-3">
+<footer class="text-center mt-4 py-3 footer">
   <p>Flyit &copy; 2023. All rights reserved.</p>
 </footer>
+
+<style>
+  .txt a{
+    color: aliceblue;
+  }
+
+  .footer{
+    background-color: rgb(7, 5, 96);
+    color: white;
+  }
+</style>
 </html>
