@@ -1,2 +1,71 @@
 {% extends 'base.html' %} {% block title %}Hotels{% endblock %}
-{% block content %}<h4>Home Page</h4>{% endblock %}
+{% block content %}
+
+<div class="container mt-4" >
+    <div class="jumbotron bg-primary text-white">
+      <h1 class="display-4">Welcome to Flight Booking App!</h1>
+      <p class="lead">Book your flights with ease.</p>
+    </div>
+
+    <div class="row mt-4 jumbotron">
+      <div class="col-md-6">
+        <h3>Search Flights</h3>
+        <!-- Flight search form -->
+        <form>
+          <div class="mb-3">
+            <label for="departure">Departure</label>
+            <input type="text" class="form-control" id="departure" placeholder="Departure">
+          </div>
+          <div class="mb-3">
+            <label for="destination">Destination</label>
+            <input type="text" class="form-control" id="destination" placeholder="Destination">
+          </div>
+          <div class="mb-3">
+            <label for="date">Date</label>
+            <input type="date" class="form-control" id="date">
+          </div>
+          <div class="mb-3">
+            <label for="passengers">Passengers</label>
+            <select class="form-control" id="passengers">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <!-- Add more options as needed -->
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+      </div>
+
+      <div class="col-md-6">
+        <h3>Flight Results</h3>
+        <!-- Flight results table -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Flight</th>
+              <th>Departure</th>
+              <th>Destination</th>
+              <th>Date</th>
+              <th>Price</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Flight 1</td>
+              <td>City A</td>
+              <td>City B</td>
+              <td>2023-06-01</td>
+              <td>$200</td>
+              <td>
+                <button type="button" class="btn btn-primary">Book</button>
+              </td>
+            </tr>
+            <!-- Add more flight results as needed -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

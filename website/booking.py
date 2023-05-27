@@ -2,12 +2,12 @@ from flask import Blueprint,render_template, request, flash
 
 booking = Blueprint('booking', __name__)
 
-@booking.route('/flight', methods=['GET', 'POST'])
-def flight():
+@booking.route('/flights', methods=['GET', 'POST'])
+def flights():
     # '''retrive data from the form'''
     # data = request.form
     # print(data)
-    return render_template('flight.html')
+    return render_template('flights.html')
 
 @booking.route('/home')
 def home():
@@ -17,9 +17,9 @@ def home():
 def flight_search():
     return ('search.html')
 
-@booking.route('/hotel')
-def hotel():
-    return render_template('hotel.html')
+@booking.route('/bookings')
+def bookings():
+    return render_template('bookings.html')
 
 @booking.route('/login')
 def login():

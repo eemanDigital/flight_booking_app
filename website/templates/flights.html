@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block title %}Flight Details{% endblock %}
+{% block content %}
+<!-- This block displays the list of flights -->
+<div class="container mt-4">
+    <h1>Flights</h1>
+    <div class="flight-list">
+      {% for flight in flights %}
+      <div class="flight">
+        <h3>{{ flight.name }}</h3>
+        <p>Departure: {{ flight.departure }}</p>
+        <p>Destination: {{ flight.destination }}</p>
+        <p>Date: {{ flight.date }}</p>
+        <p>Price: {{ flight.price }}</p>
+        <a href="/book/{{ flight.id }}" class="btn btn-primary">Book</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <!-- End of flights block -->
+{% endblock %}
