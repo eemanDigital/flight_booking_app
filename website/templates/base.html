@@ -18,177 +18,37 @@
    crossorigin="anonymous">
 
    <!--Vanila CSS (styling link)-->
-   <link rel="stylesheet" href="flight.css">
+   <!-- <link rel="stylesheet" href="../style/main.css"> -->
+   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='') }}">
 </head>
 <body>
- <div class="banner">
-     <img src="banner.jpg" height="100%" width="100%">
- </div>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-    <a class="navbar-brand active" href="/home">Flyit</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <!--<li class="nav-item">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-        </li>-->
-        <li class="nav-item">
-          <a class="nav-link" href="/bookings">Bookings</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/itinerary">Itinerary</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/A-flight">Available flight</a>
+  <nav class="navbar navbar-expand-lg txt bg-danger">
+    <div class="container">
+      <a class="navbar-brand" href="/">Flyit</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
           </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Reschedule
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light text-white my-2 my-sm-0" type="submit">Search</button>
-      </form>
+          <li class="nav-item">
+            <a class="nav-link" href="/flights">Flights</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/bookings">Bookings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/profile">Profile</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
-      
-      <!--Body section-->
-    <div class="app-body">    
-        <div class="trip-category">
-                <input type="radio" id="trip-type" name="language" value="trip-type">
-                <label for="trip-type">One-way</label>
-                <input type="radio" id="trip-type" name="language" value="trip-type">
-                <label for="trip-type">Roundtrip</label>
-            </div>
-    <!--Booking flights-->
-  <title>Flight Booking</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #f4f4f4;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    
-    h2 {
-      text-align: center;
-    }
-    
-    form {
-      margin-top: 20px;
-    }
-    
-    .form-group {
-      margin-bottom: 15px;
-    }
-    
-    .form-group label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    
-    .form-group input[type="text"],
-    .form-group input[type="email"],
-    .form-group select {
-      width: 100%;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    
-    .form-group select {
-      height: 36px;
-    }
-    
-    .form-group input[type="submit"] {
-      background-color: #1900ff;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    
-    .form-group input[type="submit"]:hover {
-      background-color: #000dff;
-    }
-  </style>
-</head>
-
-  <div class="container">
-    <h2>Bookings</h2>
-    <form>
-      <div class="form-group">
-        <label for="origin">From</label>
-        <input type="text" id="origin" name="origin" placeholder="Enter origin">
-      </div>
-      
-      <div class="form-group">
-        <label for="destination">To</label>
-        <input type="text" id="destination" name="destination" placeholder="Enter destination">
-      </div>
-      
-      <div class="form-group">
-        <label for="departure-date">Departure</label>
-        <input type="date" id="departure-date" name="departure-date">
-      </div>
-      
-      <div class="form-group">
-        <label for="passengers">Travellers</label>
-        <select id="passengers" name="passengers">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <!-- Add more options if needed -->
-        </select>
-      </div>
-      
-      <div class="form-group">
-        <input type="submit" value="Search Flights">
-      </div>
-    </form>
-  </div>
-      
-      <!-- <div class="form-outline">
-        <input type="search" id="form1" class="form-control" />
-        <label class="form-label" for="form1">Search</label>
-      </div>
-      <button type="button" class="btn btn-primary">
-        <i class="fas fa-search"></i>
-      </button>
-    </div> -->
-
-
-
-
-
-
-
-
-
-
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" 
-  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" 
-  crossorigin="anonymous"></script> -->
+  {% block content %}
+  {% endblock %}
   <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -209,4 +69,19 @@
 </script>
 
 </body>
+<!-- footer -->
+<footer class="text-center mt-4 py-3 footer">
+  <p>Flyit &copy; 2023. All rights reserved.</p>
+</footer>
+
+<style>
+  .txt a{
+    color: aliceblue;
+  }
+
+  .footer{
+    background-color: rgb(7, 5, 96);
+    color: white;
+  }
+</style>
 </html>

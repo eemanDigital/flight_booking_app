@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block title %}Flight Details{% endblock %}
+{% block content %}
+
+<div class="container mt-4">
+    <h1>Profile</h1>
+    <div class="profile-info">
+      <h3>{{ user.name }}</h3>
+      <p>Email: {{ user.email }}</p>
+      <p>Phone: {{ user.phone }}</p>
+      <p>Address: {{ user.address }}</p>
+      <a href="/edit-profile" class="btn btn-primary">Edit Profile</a>
+    </div>
+  </div>
+  
+
+{% endfor %}
